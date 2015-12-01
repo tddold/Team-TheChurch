@@ -10,6 +10,11 @@
     {
         private const int ComparableCards = 5;
 
+        /// <summary>
+        /// Finds the best possible hand given a player's cards and all revealed comunity cards.
+        /// </summary>
+        /// <param name="cards">A player's cards + all revealed comunity cards (at lesat 5 in total)</param>
+        /// <returns>Returns an object of type BestHand</returns>
         public BestHand GetBestHand(IEnumerable<Card> cards)
         {
             var cardSuitCounts = new int[(int)CardSuit.Spade + 1];
@@ -30,7 +35,7 @@
                     return new BestHand(HandRankType.StraightFlush, straightFlushCards);
                 }
 
-                // Flush
+                // Flush - it is not possible to have Flush and either Four of a kind or Full house at the same time
                 for (var i = 0; i < cardSuitCounts.Length; i++)
                 {
                     if (cardSuitCounts[i] >= ComparableCards)
