@@ -8,7 +8,7 @@
 
     public class JesusPlayer : BasePlayer
     {
-        public override string Name { get; } = "Jesus";
+        public override string Name { get; } = "Jesus" + Guid.NewGuid();
 
         public override PlayerAction GetTurn(GetTurnContext context)
         {

@@ -21,6 +21,8 @@
 
         private readonly TwoPlayersBettingLogic bettingLogic;
 
+        private Dictionary<string, ICollection<Card>> showdownCards;
+
         public TwoPlayersHandLogic(IList<InternalPlayer> players, int handNumber, int smallBlind)
         {
             this.handNumber = handNumber;
@@ -29,7 +31,8 @@
             this.deck = new Deck();
             this.communityCards = new List<Card>(5);
             this.bettingLogic = new TwoPlayersBettingLogic(this.players, smallBlind);
-        }
+            this.showdownCards = new Dictionary<string, ICollection<Card>>();
+    }
 
         public void Play()
         {
@@ -71,8 +74,7 @@
 
             foreach (var player in this.players)
             {
-                // TODO: Showdown?
-                player.EndHand(new EndHandContext());
+                player.EndHand(new EndHandContext(this.showdownCards));
             }
         }
 
@@ -85,6 +87,15 @@
             }
             else
             {
+                // showdown
+                foreach (var player in this.players)
+                {
+                    if (player.PlayerMoney.InHand)
+                    {
+                        this.showdownCards.Add(player.Name, player.Cards);
+                    }
+                }
+
                 var betterHand = Helpers.CompareCards(
                     this.players[0].Cards.Concat(this.communityCards),
                     this.players[1].Cards.Concat(this.communityCards));
