@@ -1,11 +1,10 @@
-﻿namespace TexasHoldem.AI.SmartPlayer
+﻿namespace JesusPlayer
 {
     using System;
-
-    using TexasHoldem.AI.SmartPlayer.Helpers;
     using TexasHoldem.Logic;
     using TexasHoldem.Logic.Extensions;
     using TexasHoldem.Logic.Players;
+    using Helpers;
 
     public class JesusPlayer : BasePlayer
     {

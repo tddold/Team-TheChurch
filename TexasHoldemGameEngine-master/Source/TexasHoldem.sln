@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TexasHoldem.Logic", "TexasHoldem.Logic\TexasHoldem.Logic.csproj", "{BCF99E8B-2025-444F-83C7-24542FCF33DF}"
 EndProject
@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TexasHoldem.Logic.Tests", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TexasHoldem.AI.DummyPlayer", "AI\TexasHoldem.AI.DummyPlayer\TexasHoldem.AI.DummyPlayer.csproj", "{8F8A872B-A022-4085-AABC-D3BC12B7C1D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TexasHoldem.AI.SmartPlayer", "AI\TexasHoldem.AI.SmartPlayer\TexasHoldem.AI.SmartPlayer.csproj", "{E7BA8017-D56E-485C-81D1-A1CCDAAE624F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JesusPlayer", "AI\TexasHoldem.AI.SmartPlayer\JesusPlayer.csproj", "{E7BA8017-D56E-485C-81D1-A1CCDAAE624F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TexasHoldem.Tests.GameSimulations", "Tests\TexasHoldem.Tests.GameSimulations\TexasHoldem.Tests.GameSimulations.csproj", "{E4A11A76-0F2F-4A0F-80E8-6B5026BFB78A}"
 EndProject

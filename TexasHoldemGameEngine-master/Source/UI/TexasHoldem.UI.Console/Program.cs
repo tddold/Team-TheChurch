@@ -1,8 +1,7 @@
 ﻿namespace TexasHoldem.UI.Console
 {
     using System;
-
-    using TexasHoldem.AI.SmartPlayer;
+    using JesusPlayer;
     using TexasHoldem.Logic.GameMechanics;
 
     public static class Program

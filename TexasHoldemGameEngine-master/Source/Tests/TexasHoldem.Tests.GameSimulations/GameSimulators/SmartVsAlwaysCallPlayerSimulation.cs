@@ -1,7 +1,7 @@
 ﻿namespace TexasHoldem.Tests.GameSimulations.GameSimulators
 {
     using TexasHoldem.AI.DummyPlayer;
-    using TexasHoldem.AI.SmartPlayer;
+    using JesusPlayer;
     using TexasHoldem.Logic.Players;
 
     internal class SmartVsAlwaysCallPlayerSimulation : BaseGameSimulator
