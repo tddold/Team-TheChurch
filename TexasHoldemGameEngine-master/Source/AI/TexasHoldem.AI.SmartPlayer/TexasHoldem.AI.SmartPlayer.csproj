@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="Helpers\CardValuationType.cs" />
     <Compile Include="Helpers\HandStrengthValuation.cs" />
-    <Compile Include="SmartPlayer.cs" />
+    <Compile Include="JesusPlayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

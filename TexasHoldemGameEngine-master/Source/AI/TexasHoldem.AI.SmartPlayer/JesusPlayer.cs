@@ -7,9 +7,9 @@
     using TexasHoldem.Logic.Extensions;
     using TexasHoldem.Logic.Players;
 
-    public class SmartPlayer : BasePlayer
+    public class JesusPlayer : BasePlayer
     {
-        public override string Name { get; } = "SmartPlayer_" + Guid.NewGuid();
+        public override string Name { get; } = "Jesus";
 
         public override PlayerAction GetTurn(GetTurnContext context)
         {

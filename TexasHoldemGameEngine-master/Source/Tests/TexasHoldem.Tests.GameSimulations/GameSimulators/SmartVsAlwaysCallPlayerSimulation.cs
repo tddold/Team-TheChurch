@@ -6,7 +6,7 @@
 
     internal class SmartVsAlwaysCallPlayerSimulation : BaseGameSimulator
     {
-        private readonly IPlayer firstPlayer = new SmartPlayer();
+        private readonly IPlayer firstPlayer = new JesusPlayer();
 
         private readonly IPlayer secondPlayer = new AlwaysCallDummyPlayer();
 

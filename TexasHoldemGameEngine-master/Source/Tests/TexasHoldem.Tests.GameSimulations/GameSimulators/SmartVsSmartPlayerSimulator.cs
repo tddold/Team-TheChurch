@@ -5,8 +5,8 @@
 
     public class SmartVsSmartPlayerSimulator : BaseGameSimulator
     {
-        private readonly IPlayer firstPlayer = new SmartPlayer();
-        private readonly IPlayer secondPlayer = new SmartPlayer();
+        private readonly IPlayer firstPlayer = new JesusPlayer();
+        private readonly IPlayer secondPlayer = new JesusPlayer();
 
         protected override IPlayer GetFirstPlayer()
         {
