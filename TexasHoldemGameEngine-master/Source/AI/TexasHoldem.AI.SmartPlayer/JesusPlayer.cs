@@ -1,16 +1,14 @@
-﻿namespace TexasHoldem.AI.SmartPlayer
+﻿namespace JesusPlayer
 {
     using System;
-
-    using TexasHoldem.AI.SmartPlayer.Helpers;
     using TexasHoldem.Logic;
     using TexasHoldem.Logic.Extensions;
     using TexasHoldem.Logic.Players;
+    using Helpers;
 
-    // TODO: This player is far far away from being smart!
-    public class SmartPlayer : BasePlayer
+    public class JesusPlayer : BasePlayer
     {
-        public override string Name { get; } = "SmartPlayer_" + Guid.NewGuid();
+        public override string Name { get; } = "Jesus" + Guid.NewGuid();
 
         public override PlayerAction GetTurn(GetTurnContext context)
         {

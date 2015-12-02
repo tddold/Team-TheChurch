@@ -1,4 +1,4 @@
-﻿namespace TexasHoldem.AI.SmartPlayer.Helpers
+﻿namespace JesusPlayer.Helpers
 {
     using TexasHoldem.Logic.Cards;
 

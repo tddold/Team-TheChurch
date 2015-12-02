@@ -1,4 +1,4 @@
-﻿namespace JesusPlayer.Helpers
+﻿namespace JesusBot.Helpers
 {
     public enum CardValuationType
     {

@@ -44,6 +44,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\CardValuationType.cs" />
+    <Compile Include="Helpers\HandStrengthValuation.cs" />
     <Compile Include="Jesus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

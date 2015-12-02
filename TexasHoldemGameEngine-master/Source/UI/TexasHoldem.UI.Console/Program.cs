@@ -1,8 +1,7 @@
 ﻿namespace TexasHoldem.UI.Console
 {
     using System;
-
-    using TexasHoldem.AI.SmartPlayer;
+    using JesusPlayer;
     using TexasHoldem.Logic.GameMechanics;
 
     public static class Program
@@ -21,7 +20,7 @@
             ConsoleHelper.WriteOnConsole(GameHeight - 1, GameWidth - ProgramName.Length - 1, ProgramName, ConsoleColor.Green);
 
             var consolePlayer1 = new ConsoleUiDecorator(new ConsolePlayer(0), 0, GameWidth, 5);
-            var consolePlayer2 = new ConsoleUiDecorator(new SmartPlayer(), 6, GameWidth, 5);
+            var consolePlayer2 = new ConsoleUiDecorator(new JesusPlayer(), 6, GameWidth, 5);
             ITexasHoldemGame game = new TwoPlayersTexasHoldemGame(consolePlayer1, consolePlayer2);
             game.Start();
         }

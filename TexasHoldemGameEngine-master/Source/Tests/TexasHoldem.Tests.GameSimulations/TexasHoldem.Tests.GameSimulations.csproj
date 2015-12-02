@@ -80,9 +80,9 @@
       <Project>{8F8A872B-A022-4085-AABC-D3BC12B7C1D8}</Project>
       <Name>TexasHoldem.AI.DummyPlayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\AI\TexasHoldem.AI.SmartPlayer\TexasHoldem.AI.SmartPlayer.csproj">
+    <ProjectReference Include="..\..\AI\TexasHoldem.AI.SmartPlayer\JesusPlayer.csproj">
       <Project>{E7BA8017-D56E-485C-81D1-A1CCDAAE624F}</Project>
-      <Name>TexasHoldem.AI.SmartPlayer</Name>
+      <Name>JesusPlayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\TexasHoldem.Logic\TexasHoldem.Logic.csproj">
       <Project>{BCF99E8B-2025-444F-83C7-24542FCF33DF}</Project>
