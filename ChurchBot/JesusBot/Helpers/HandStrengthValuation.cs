@@ -49,20 +49,5 @@
                     return CardValuationType.Unplayable;
             }
         }
-
-        public static CardValuationType Flop(Card leftCard, Card rightCard, IReadOnlyCollection<Card> communityCard)
-        {
-            return FlopHandStrength.CalculateRisk(leftCard, rightCard, communityCard);
-        }
-
-        public static CardValuationType Turn(Card leftCard, Card rightCard, IReadOnlyCollection<Card> communityCard)
-        {
-            return TurnHandStrength.CalculateRisk(leftCard, rightCard, communityCard);
-        }
-
-        public static CardValuationType River(Card leftCard, Card rightCard, IReadOnlyCollection<Card> communityCard)
-        {
-            return RiverHandStrength.CalculateRisk(leftCard, rightCard, communityCard);
-        }
     }
 }

@@ -41,43 +41,9 @@
                 return PlayerAction.CheckOrCall();
             }
 
-            if (context.RoundType == GameRoundType.Flop)
-            {
-                return this.GetFlopAction(context);
-            }
+            var strengthOfHand = CustomHandEvaluator.GetStrengthOfHand(this.FirstCard, this.SecondCard, this.CommunityCards);
 
-            if (context.RoundType == GameRoundType.Turn)
-            {
-                return this.GetTurnAction(context);
-            }
-
-            if (context.RoundType == GameRoundType.River)
-            {
-                return this.GetRiverAction(context);
-            }
-
-            return PlayerAction.CheckOrCall();
-        }
-
-        private PlayerAction GetFlopAction(GetTurnContext context)
-        {
-            var playHand = HandStrengthValuation.Flop(this.FirstCard, this.SecondCard, this.CommunityCards);
-
-            return GetActionByCardValuationType(playHand, context);
-        }
-
-        private PlayerAction GetTurnAction(GetTurnContext context)
-        {
-            var playHand = HandStrengthValuation.Turn(this.FirstCard, this.SecondCard, this.CommunityCards);
-
-            return GetActionByCardValuationType(playHand, context);
-        }
-
-        private PlayerAction GetRiverAction(GetTurnContext context)
-        {
-            var playHand = HandStrengthValuation.River(this.FirstCard, this.SecondCard, this.CommunityCards);
-
-            return GetActionByCardValuationType(playHand, context);
+            return GetActionByCardValuationType(strengthOfHand, context);
         }
 
         private PlayerAction GetActionByCardValuationType(CardValuationType playHand, GetTurnContext context)
@@ -87,17 +53,32 @@
                 return GetUnplayableAction(context);
             }
 
-            if (playHand == CardValuationType.Risky)
+            if (playHand == CardValuationType.Recommended && context.CanCheck)
             {
                 return ChooseAction(context.MoneyLeft, 0.1f);
             }
 
-            if (playHand == CardValuationType.Recommended)
+            if (playHand == CardValuationType.VeryRecommended)
+            {
+                return ChooseAction(context.MoneyLeft, 0.1f);
+            }
+
+            if (playHand == CardValuationType.GoodHand)
+            {
+                return ChooseAction(context.MoneyLeft, 0.2f);
+            }
+
+            if (playHand == CardValuationType.VeryGoodHand)
             {
                 return ChooseAction(context.MoneyLeft, 0.25f);
             }
 
-            if (playHand == CardValuationType.VeryPowerful)
+            if (playHand == CardValuationType.PowerfulHand)
+            {
+                return ChooseAction(context.MoneyLeft, 0.4f);
+            }
+
+            if (playHand == CardValuationType.VeryPowerfulHand)
             {
                 return ChooseAction(context.MoneyLeft, 0.5f);
             }
