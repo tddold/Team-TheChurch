@@ -2,7 +2,7 @@
 {
     using System;
     using TexasHoldem.Logic.GameMechanics;
-    using AI.JesusPlayer;
+    using AI.JesusPlayerNew;
     public static class Program
     {
         private const string ProgramName = "TexasHoldem.UI.Console (c) 2015";

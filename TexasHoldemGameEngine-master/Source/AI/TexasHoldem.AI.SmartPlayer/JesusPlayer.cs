@@ -1,10 +1,10 @@
 ﻿namespace JesusPlayer
 {
     using System;
+    using Helpers;
     using TexasHoldem.Logic;
     using TexasHoldem.Logic.Extensions;
     using TexasHoldem.Logic.Players;
-    using Helpers;
 
     public class JesusPlayer : BasePlayer
     {

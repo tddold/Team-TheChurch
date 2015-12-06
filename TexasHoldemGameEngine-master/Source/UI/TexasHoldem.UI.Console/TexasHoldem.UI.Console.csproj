@@ -53,6 +53,9 @@
     <CodeAnalysisRuleSet>..\..\Rules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="JesusBot">
+      <HintPath>..\..\..\..\ChurchBot\JesusBot\bin\Debug\JesusBot.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -82,13 +85,9 @@
       <Project>{8f8a872b-a022-4085-aabc-d3bc12b7c1d8}</Project>
       <Name>TexasHoldem.AI.DummyPlayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\AI\TexasHoldem.AI.JesusPlayer\TexasHoldem.AI.JesusPlayer.csproj">
-      <Project>{780e78f3-9a60-40fb-8896-efa96f737436}</Project>
-      <Name>TexasHoldem.AI.JesusPlayer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\AI\TexasHoldem.AI.SmartPlayer\JesusPlayer.csproj">
-      <Project>{e7ba8017-d56e-485c-81d1-a1ccdaae624f}</Project>
-      <Name>JesusPlayer</Name>
+    <ProjectReference Include="..\..\AI\TexasHoldem.AI.JesusPlayerNew\TexasHoldem.AI.JesusPlayerNew.csproj">
+      <Project>{03ab23ba-7d37-48e5-b5a1-f767353f9d5f}</Project>
+      <Name>TexasHoldem.AI.JesusPlayerNew</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

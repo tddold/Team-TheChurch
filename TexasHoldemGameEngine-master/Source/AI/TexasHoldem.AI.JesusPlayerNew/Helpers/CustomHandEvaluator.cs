@@ -1,4 +1,4 @@
-﻿namespace JesusBot.Helpers
+﻿namespace TexasHoldem.AI.JesusPlayerNew.Helpers
 {
     using System.Collections.Generic;
     using System.Linq;
@@ -170,7 +170,6 @@
             // Two pairs
             if (countOfLeftType == 2 && countOfRightType == 2)
             {
-
                 return CardValuationType.Risky;
             }
 
